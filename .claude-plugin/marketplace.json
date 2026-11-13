@@ -3,6 +3,7 @@
   "owner": {
     "name": "GOAT Academy"
   },
+  "description": "Super 8 Home Movie · Хуучин хальс: home-movie look for Reels/TikTok. Mongolian-first.",
   "plugins": [
     {
       "name": "goat-super8",
