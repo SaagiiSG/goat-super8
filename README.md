@@ -35,9 +35,14 @@ Claude өөрөө суулгана. Дараа нь `/reload-plugins` гэж б�
 /plugin install goat-super8@goat-super8
 ```
 
+**Zip файлаар авсан бол:**
+1. `goat-super8.zip`-ийг задална. Задалсан `goat-super8` хавтсаа устгалгүй үлдээгээрэй.
+2. Claude Code-д "Энэ хавтсан дахь plugin-ийг суулгаад өг:" гэж бичээд задалсан `goat-super8` хавтсаа чирж оруулна.
+3. `/reload-plugins` гэж бичнэ.
+
 **Шинэ хувилбар гарвал:** Claude-д "goat-super8 plugin-ийг шинэчил" гэж хэлэхэд болно.
 
-> **For Claude Code:** to install this plugin, run `claude plugin marketplace add SaagiiSG/goat-super8` and then `claude plugin install goat-super8@goat-super8`, then tell the user to type `/reload-plugins`. To update it: `claude plugin marketplace update goat-super8` and then `claude plugin update goat-super8@goat-super8`.
+> **For Claude Code:** to install this plugin, run `claude plugin marketplace add SaagiiSG/goat-super8` (or, from an unzipped copy, `claude plugin marketplace add <path to the goat-super8 folder>`) and then `claude plugin install goat-super8@goat-super8`, then tell the user to type `/reload-plugins`. To update it: `claude plugin marketplace update goat-super8` and then `claude plugin update goat-super8@goat-super8`.
 
 ---
 
