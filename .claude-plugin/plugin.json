@@ -1,0 +1,20 @@
+{
+  "name": "goat-super8",
+  "version": "1.0.0",
+  "description": "Super 8 Home Movie · Хуучин хальс: turns phone clips into a 1970s home movie: an 18 fps stutter inside a small upright box on black, warm faded colour, coarse grain, gate weave, flash frames at the cuts, an orange light leak and a handwritten Mongolian label. Renders a 1080x1920 MP4 for Reels/TikTok.",
+  "author": {
+    "name": "GOAT Academy"
+  },
+  "keywords": [
+    "video",
+    "editing",
+    "reels",
+    "tiktok",
+    "super8",
+    "film",
+    "vintage",
+    "retro",
+    "mongolian",
+    "ffmpeg"
+  ]
+}
