@@ -1,0 +1,22 @@
+@font-face { font-family: "Caveat"; src: url("fonts/Caveat%5Bwght%5D.ttf"); font-weight: 400 700; }
+@font-face { font-family: "PT Mono"; src: url("fonts/PTM55FT.ttf"); }
+@font-face { font-family: "DSEG7"; src: url("fonts/DSEG7Classic-Bold.ttf"); }
+
+html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+#root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+
+/* The 3:4 film box (preview: left 12.5%, top 21.875%, 75% x 56.25%). The footage is 10 px bigger on
+   every side and weaves inside it, so its edge never shows. */
+#box { position: absolute; left: 135px; top: 420px; width: 810px; height: 1080px; overflow: hidden; background: #000; isolation: isolate; }
+#weave { position: absolute; left: -10px; top: -10px; width: 830px; height: 1100px; }
+#film { display: block; width: 830px; height: 1100px; }
+#leak { position: absolute; inset: 0; opacity: 0; mix-blend-mode: screen;
+  background: radial-gradient(circle at 85% 15%, rgba(255, 128, 40, 0.9), rgba(255, 70, 0, 0) 62%); }
+#cream, #flare { position: absolute; inset: 0; background: #FFF6E8; opacity: 0; }
+
+#texts > div { position: absolute; left: 135px; top: 0; white-space: nowrap; }
+/* preview: 78 px label, 30 px place; bigger here so both read on a phone */
+.label { font: 700 92px/0.95 "Caveat", cursive; color: #EFE3CF; }
+.place { font: 400 36px/1.2 "PT Mono", monospace; letter-spacing: 0.2em; color: #8E857A; }
+#counter { position: absolute; right: 135px; top: 1545px; font: 28px/1 "DSEG7", monospace; color: #8E857A; }
+#counter::after { content: attr(data-a) attr(data-b) attr(data-c) attr(data-d); }
