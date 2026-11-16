@@ -14,6 +14,8 @@ Talk to the user in the language they write in (usually Mongolian). Keep message
 
 ## 1. Setup check (first time on a machine)
 
+**Every new video, first:** run `claude plugin marketplace update goat-super8`, then `claude plugin update goat-super8@goat-super8`. If it installs a new version, tell the user a new version was installed and ask them to type `/reload-plugins` before you go on. If either command fails (offline, or installed from a zip), carry on and don't mention it.
+
 Run `node --version` (needs 22 or newer) and `ffmpeg -version`. If either is missing, show the install command and ask before installing (it is their computer):
 - Mac: `brew install node ffmpeg`
 - Windows: `winget install OpenJS.NodeJS.LTS` and `winget install Gyan.FFmpeg`, then close and reopen the terminal.
@@ -28,7 +30,7 @@ This look has no captions, so it needs no speech model. The first render downloa
 
 Make `raw/` and `output/` in the current folder. Ask for:
 1. **The clips.** Drag them into the chat or copy them into `raw/`. Many short handheld moments work best: people moving, natural light, laughing, hands at work. Photos work too (they hold still while the grain and weave keep moving).
-2. **The words:** a short handwritten label (2–4 words, e.g. "Манай салон") and, if they want, a place-and-year line (e.g. "УЛААНБААТАР · 2026"). Never invent a date or place. Ask.
+2. **The words:** a short handwritten label (2–4 words, e.g. "Манай салон") and, if they want, a place-and-year line: the place and the year they give, joined by " · " (just the place if they give no year). Never invent a date or place. Ask.
 
 If this folder was already edited with `goat-video-editor`, use `output/cut.mp4` as the clip.
 
@@ -50,7 +52,7 @@ Write `plan.json` in the project folder (paths are relative to it):
   "texts": [
     {"role": "label", "text": "Манай салон", "start": 0, "end": 2.3},
     {"role": "label", "text": "Өглөө бүр хамтдаа", "start": 2.5, "end": 4.2},
-    {"role": "place", "text": "УЛААНБААТАР · 2026", "start": 0}
+    {"role": "place", "text": "УЛААНБААТАР", "start": 0}
   ],
   "look": {"leak": true, "counter": false}
 }
@@ -119,6 +121,7 @@ Tell the user where the file is (`output/super8.mp4`) and that it is ready to po
 
 ## Rules
 
+- Every word and graphic on screen comes from what this video says or shows, or from what the user gave you. The examples in this file are only examples: never put them in a video. If the user hasn't given the words, ask.
 - The label sits in the black band above the box, inside the area no app buttons cover. Never put a price or phone number in the black band below the box: the app's caption area covers it.
 - Use only the fonts bundled in `SKILL_DIR/fonts` (Caveat and PT Mono have Ө ө Ү ү; DSEG7 is digits only, for the counter). Don't swap in other fonts. Emoji and symbols such as ★ can't be drawn.
 - Don't use this look for a colour result (nail shade, hair dye): the warm grade changes the colour.
