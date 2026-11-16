@@ -3,7 +3,7 @@
 The code in this repository is MIT-licensed (see LICENSE). These bundled files keep their own licences:
 
 - **Fonts** in `skills/goat-super8/fonts/` (Caveat[wght].ttf, DSEG7Classic-Bold.ttf, PTM55FT.ttf): SIL Open Font License 1.1. Each family's licence text sits next to it as `OFL-<Family>.txt`.
-- **Sound effects** (`skills/goat-super8/scripts/sfx/*.wav`): made in code by GOAT Academy (core/sfx.py), part of this repository's MIT code.
+- **Sound effects** (`skills/goat-super8/scripts/sfx/*.wav`): made in code by GOAT Academy (core/make_sfx.py, from the recipes in core/sfx.py), part of this repository's MIT code.
 
 Downloaded or used at run time, not bundled:
 

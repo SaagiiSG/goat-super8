@@ -110,7 +110,7 @@ export async function prepare(ctx) {
   return { film: filmFrames(cuts, ctx.dur), flashes: flashTimes(cuts, ctx.dur), leaks: leaks(cuts, ctx.dur, ctx.plan.look?.leak !== false) };
 }
 
-// Soft on purpose (Saagii, 14 Nov: "tone down"; v1 played it at 1.0); members raise it with "sfx": {"volume": …}.
+// About 30% of v1's 1.0 (Saagii, 16 Nov: "bring the sounds effects down a bit"); members raise it with "sfx": {"volume": …}.
 export function sfx(plan, ctx) {
-  return [{ sound: "projector", at: 0, dur: ctx.dur, volume: 0.5 }];
+  return [{ sound: "projector", at: 0, dur: ctx.dur, volume: 0.3 }];
 }
